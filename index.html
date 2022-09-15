@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Jogo Da Forca</title>
+</head>
+
+<header>
+    <img class="logo" src="img/logo.png">
+</header>
+
+<body>
+    <h1> Jogo da Forca</h1>
+    <h2> Digite no teclado uma letra e tente 
+            <br>adivinhar a palavra!</h2>
+
+
+
+    <div class="jogo-container">
+        <div class="forca-container">
+            <svg height="250" width="200" class="forca">
+        <!--Forca-->
+        <line x1="60" y1="20" x2="140" y2="20"></line>
+        <line x1="140" y1="20" x2="140" y2="50"></line>
+        <line x1="60" y1="20" x2="60" y2="230"></line>
+        <line x1="20" y1="230" x2="100" y2="230"></line>
+
+        <!--Cabeça-->
+        <circle cx="140" cy="70" r="20" class="forca-parte"></circle>
+
+        <!--Corpo-->
+        <line x1="140" y1="90" x2="140" y2="150" class="forca-parte"></line>
+
+        <!--Braços-->
+        <line x1="140" y1="120" x2="120" y2="100" class="forca-parte"></line>
+        <line x1="140" y1="120" x2="160" y2="100" class="forca-parte"></line>
+
+        <!--Pernas-->
+        <line x1="140" y1="150" x2="120" y2="180" class="forca-parte"></line>
+        <line x1="140" y1="150" x2="160" y2="180" class="forca-parte"></line>
+            </svg>
+
+        </div>
+
+        <div class="letras-erradas-container">
+         <h3> Letras Erradas</h3>
+        </div>
+    </div>
+
+    <div class="palavra-secreta-container"></div>
+
+    <div class="aviso">
+        Você já usou essa letra!
+    </div>
+
+    <div class="popup-container">
+        <div class="popup">
+          <h2 id="mensagem"></h2>
+          <button id="btn-jogar" onclick="reiniciarJogo()">
+            Jogar novamente
+          </button>
+        </div>
+      </div>
+    
+
+
+
+    <footer>
+        
+        <p class="copyright" > <a href="https://github.com/EzequielCarlosCorrea" target="_blank">
+             Ezequiel Carlos Correa &copy; 2022</a></p>
+      </footer>
+    
+      <script src="script.js"></script>
+</body>
+
+
+</html>
